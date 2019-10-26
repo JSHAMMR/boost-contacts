@@ -72,9 +72,86 @@ class DetailsViewController: UIViewController {
             self.txtFPhone.text = item!.phone as String
             
         }
+        
+        
+        do {
+            try setRightNavigationBarItem()
+            
+        }
+        catch {
+            
+        }
+        
 		// do someting...
     }
+    
+    func setRightNavigationBarItem() throws -> Bool {
+        
+        let rightButton = UIBarButtonItem(title: itemAction, style: UIBarButtonItem.Style.done, target: self, action:  #selector(self.save))
+        
+        
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        
+        return true
+    }
+    
+    @objc func save () {
+        guard let firstName = self.txtFFirstName.text, firstName != "" else {
+            self.txtFFirstName.errorMessage = "Please Enter First Name!"
+            return
+        }
+        
+        guard let lastName = self.txtFLastName.text,lastName != ""  else {
+            self.txtFLastName.errorMessage = "Please Enter Last Name!"
+            return
+        }
+        
+        let email = self.txtFEmail.text
+        let phone = self.txtFPhone.text
+        
+        
+        insertToDB(firstName: firstName, lastName: lastName, email: email!, phone: phone!)
+        
+        
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func insertToDB (firstName:String, lastName:String, email:String = "" ,  phone:String = "") {
+        
+        
+        
+        
+        let contact = UserContact()
+        contact.id = itemId
+        contact.firstName = firstName
+        contact.lastName = lastName
+        contact.email = email
+        contact.phone = phone
+        
+        
+        
+        if itemAction == Action.add {
+            try! realm.write {
+                realm.add(contact, update: false)
+            }
+        }
+        
+        if itemAction == Action.update {
+            try! realm.write {
+                realm.add(contact, update: true)
+            }
+        }
+        
+        
+        
+        
+    }
 }
+
+
+
 
 extension DetailsViewController: IDetailsViewController {
 	// do someting...
