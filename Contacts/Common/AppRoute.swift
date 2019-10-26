@@ -4,7 +4,6 @@
 //
 //  Created by Gamil Ali Qaid Shamar on 27/10/2019.
 
-
 import Foundation
 import UIKit
 
@@ -19,6 +18,11 @@ enum PresentType {
     case presentWithNavigation
     case modal
     case modalWithNavigation
+}
+enum Action {
+    static let add = "Add"
+    static let update = "Update"
+    
 }
 
 protocol IRouter {
@@ -97,7 +101,7 @@ extension UIViewController {
             self.dismiss(animated: true, completion: {
                 completion?()
             })
-        }                
+        }
     }
     
     func backToRoot(_ completion: (() -> Void)? = nil) {
