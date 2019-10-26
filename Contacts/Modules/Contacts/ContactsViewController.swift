@@ -8,7 +8,22 @@
 
 import UIKit
 import SwiftyJSON
+import RealmSwift
 
+
+
+class UserContact: Object {
+    
+    @objc dynamic var id = ""
+    @objc dynamic var firstName = ""
+    @objc dynamic var lastName = ""
+    @objc dynamic var email = ""
+    @objc dynamic var phone = ""
+    @objc dynamic var created = Date()
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+}
 enum FileLoadError: Error {
     case failedLoadingResource(String)
     case failedSerialization
@@ -24,11 +39,13 @@ class ContactsViewController: UIViewController {
 	var router: IContactsRouter?
     fileprivate var defaults = UserDefaults.standard
     fileprivate var jsonData: Data?
+    let realm = try! Realm()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
 		// do someting...
-        
+        self.title = "Contacts"
+
         do {
             // load json file
             
@@ -58,7 +75,24 @@ class ContactsViewController: UIViewController {
                 
                 let contact : Array =  JSON(jsonObject).arrayValue
                 // saving data to local db
-                
+                contact.forEach({
+                    
+                    
+                    print(" id == \($0["id"].stringValue)")
+                    let contact = UserContact()
+                    contact.id = $0["id"].stringValue
+                    contact.firstName = $0["firstName"].stringValue
+                    contact.lastName = $0["lastName"].stringValue
+                    contact.email = $0["email"].stringValue
+                    contact.phone = $0["phone"].stringValue
+                    
+                    try! realm.write {
+                        realm.add(contact)
+                    }
+                    print("name of contact: \(contact.firstName)")
+                    
+                    
+                })
                 
                 defaults.set(true, forKey: "fileLoaded")
                 
