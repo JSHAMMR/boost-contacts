@@ -36,6 +36,10 @@
 		DC0B887F2364CFF900D85260 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B887E2364CFF900D85260 /* UIView.swift */; };
 		DC0B88812364D03A00D85260 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88802364D03A00D85260 /* UIViewController.swift */; };
 		DC0B88832364D07F00D85260 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88822364D07F00D85260 /* EdgeInsetLabel.swift */; };
+		DC0B88892364D20400D85260 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0B88862364D1B300D85260 /* Montserrat-Bold.ttf */; };
+		DC0B888A2364D20400D85260 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0B88852364D1B300D85260 /* Montserrat-Medium.ttf */; };
+		DC0B888B2364D20400D85260 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0B88882364D1B300D85260 /* Montserrat-Regular.ttf */; };
+		DC0B888C2364D20400D85260 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0B88872364D1B300D85260 /* Montserrat-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		DC0B887E2364CFF900D85260 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DC0B88802364D03A00D85260 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DC0B88822364D07F00D85260 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
+		DC0B88852364D1B300D85260 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		DC0B88862364D1B300D85260 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		DC0B88872364D1B300D85260 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		DC0B88882364D1B300D85260 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		E2E93763F7F32755360CD1F2 /* Pods-ContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsTests.release.xcconfig"; path = "Target Support Files/Pods-ContactsTests/Pods-ContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8F6857E0FC46B903990D010 /* Pods_Contacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,6 +194,7 @@
 		DC0B88372364C00500D85260 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC0B88842364D18B00D85260 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +227,17 @@
 				DC0B886D2364C84100D85260 /* DetailsManager.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		DC0B88842364D18B00D85260 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B88862364D1B300D85260 /* Montserrat-Bold.ttf */,
+				DC0B88852364D1B300D85260 /* Montserrat-Medium.ttf */,
+				DC0B88882364D1B300D85260 /* Montserrat-Regular.ttf */,
+				DC0B88872364D1B300D85260 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E06CFE98B0D312A31D582903 /* Pods */ = {
@@ -315,6 +335,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0B88892364D20400D85260 /* Montserrat-Bold.ttf in Resources */,
+				DC0B888A2364D20400D85260 /* Montserrat-Medium.ttf in Resources */,
+				DC0B888B2364D20400D85260 /* Montserrat-Regular.ttf in Resources */,
+				DC0B888C2364D20400D85260 /* Montserrat-SemiBold.ttf in Resources */,
 				DC0B881C2364AD6500D85260 /* LaunchScreen.storyboard in Resources */,
 				DC0B88632364C5F300D85260 /* ContactsViewController.xib in Resources */,
 				DC0B88742364C84100D85260 /* DetailsViewController.xib in Resources */,
