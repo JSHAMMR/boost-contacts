@@ -6,6 +6,9 @@ target 'Contacts' do
   use_frameworks!
 
   # Pods for Contacts
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'RealmSwift'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
   target 'ContactsTests' do
     inherit! :search_paths

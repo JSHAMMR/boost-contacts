@@ -1,3 +1,30 @@
-PODFILE CHECKSUM: a84818c4704be326a1f24e90f68201957825361e
+PODS:
+  - Realm (3.18.0):
+    - Realm/Headers (= 3.18.0)
+  - Realm/Headers (3.18.0)
+  - RealmSwift (3.18.0):
+    - Realm (= 3.18.0)
+  - SkyFloatingLabelTextField (3.7.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Realm
+    - RealmSwift
+    - SkyFloatingLabelTextField
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
+  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 1af225480361de129855d836bdf7afa8e419c030
 
 COCOAPODS: 1.6.0
