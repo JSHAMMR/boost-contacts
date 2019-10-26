@@ -24,6 +24,10 @@ class UserContact: Object {
         return "id"
     }
 }
+enum NavigationError: Error {
+    case failedRightNavBarImage
+    
+}
 enum FileLoadError: Error {
     case failedLoadingResource(String)
     case failedSerialization
@@ -51,6 +55,7 @@ class ContactsViewController: UIViewController {
         super.viewDidLoad()
 		// do someting...
         self.title = "Contacts"
+        hideKeyboardWhenTappedAround()
 
         do {
             // load json file
@@ -59,7 +64,9 @@ class ContactsViewController: UIViewController {
             
             // register cell
             try! registerNibCell(nibNameString: "ContactCell", reuseIdentifier: "ContactCell")
-            
+            // router.navigateToDetails(id: "22")
+            try! setRightNavigationBarItem(imageName: "accordion-plus")
+
             
             
         } catch  {
@@ -144,6 +151,41 @@ class ContactsViewController: UIViewController {
         }
         
         return true
+    }
+    func setRightNavigationBarItem(imageName:String) throws -> Bool {
+        guard let menuImage = UIImage(named: imageName) else {
+            throw NavigationError.failedRightNavBarImage
+        }
+        
+        let rightButton: UIBarButtonItem = UIBarButtonItem(image: menuImage, style: UIBarButtonItem.Style.done, target: self, action: #selector(self.navigateToDetails))
+        
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        
+        return true
+    }
+    
+    
+    
+    @objc func navigateToDetails () {
+        router?.navigateToDetails(id: randomString(length: 10), action: Action.add)
+    }
+    
+    
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
     
 }

@@ -1,26 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="Contacts" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="txtFEmail" destination="lD8-K2-Woe" id="dKy-Q7-l9Q"/>
+                <outlet property="txtFFirstName" destination="ZhG-13-RhK" id="WBd-8g-Y5E"/>
+                <outlet property="txtFLastName" destination="L5L-CB-laS" id="Fcr-0v-2ln"/>
+                <outlet property="txtFPhone" destination="J9P-Af-Gjo" id="ONh-hH-9JM"/>
+                <outlet property="view" destination="HaX-MQ-GRP" id="49Q-1K-ezR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HaX-MQ-GRP">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-xh-UCN">
+                    <rect key="frame" x="137.5" y="130" width="100" height="100"/>
+                    <color key="backgroundColor" name="Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="7pW-bv-kca"/>
+                        <constraint firstAttribute="height" constant="100" id="8zT-kU-Ewh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-3o-1n4" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="279" width="375" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="URL-br-9ie"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGq-CY-hRt" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="319" width="130" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="9WE-Sw-sPt"/>
+                        <constraint firstAttribute="width" constant="130" id="LID-6z-9Ha"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2by-ah-fCQ" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="359" width="130" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="vl8-bJ-M65"/>
+                        <constraint firstAttribute="height" constant="30" id="z0X-Rg-EKg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-13-RhK" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="140" y="319" width="225" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="mFR-WD-y6C"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-CB-laS" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="140" y="359" width="225" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3mp-fu-iWi"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRC-Qs-5lY" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="404" width="375" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="or0-GS-zaj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXi-8n-Jvn" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="444" width="130" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DYT-rD-yQl"/>
+                        <constraint firstAttribute="width" constant="130" id="Dgl-bh-jof"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKr-Dg-Z16" customClass="EdgeInsetLabel" customModule="Contacts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="484" width="130" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="exc-QL-gSH"/>
+                        <constraint firstAttribute="width" constant="130" id="wgh-eI-INJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-K2-Woe" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="140" y="444" width="225" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="mFh-DP-ka2"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9P-Af-Gjo" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="140" y="484" width="225" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Yym-wv-Quk"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="c3Q-4q-BB3" firstAttribute="trailing" secondItem="L5L-CB-laS" secondAttribute="trailing" constant="10" id="1AA-UD-WKj"/>
+                <constraint firstItem="ZhG-13-RhK" firstAttribute="top" secondItem="aIv-3o-1n4" secondAttribute="bottom" constant="10" id="1jD-st-hcy"/>
+                <constraint firstAttribute="trailing" secondItem="J9P-Af-Gjo" secondAttribute="trailing" constant="10" id="5st-J9-bed"/>
+                <constraint firstItem="DvS-xh-UCN" firstAttribute="centerX" secondItem="HaX-MQ-GRP" secondAttribute="centerX" id="6dC-Dt-5R2"/>
+                <constraint firstItem="c3Q-4q-BB3" firstAttribute="trailing" secondItem="ZhG-13-RhK" secondAttribute="trailing" constant="10" id="9P2-kb-Aiq"/>
+                <constraint firstItem="oRC-Qs-5lY" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="AKZ-Br-zky"/>
+                <constraint firstItem="L5L-CB-laS" firstAttribute="top" secondItem="ZhG-13-RhK" secondAttribute="bottom" constant="10" id="CxP-Nl-whd"/>
+                <constraint firstItem="lD8-K2-Woe" firstAttribute="top" secondItem="oRC-Qs-5lY" secondAttribute="bottom" constant="10" id="DYB-ya-jju"/>
+                <constraint firstItem="PGq-CY-hRt" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="FXW-0i-f60"/>
+                <constraint firstItem="aIv-3o-1n4" firstAttribute="top" secondItem="DvS-xh-UCN" secondAttribute="bottom" constant="49" id="FcJ-N6-oOt"/>
+                <constraint firstItem="PGq-CY-hRt" firstAttribute="top" secondItem="aIv-3o-1n4" secondAttribute="bottom" constant="10" id="Gjb-Q1-GF9"/>
+                <constraint firstItem="WXi-8n-Jvn" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="H9c-xT-dqd"/>
+                <constraint firstItem="2by-ah-fCQ" firstAttribute="top" secondItem="PGq-CY-hRt" secondAttribute="bottom" constant="10" id="IDX-nY-c7h"/>
+                <constraint firstItem="J9P-Af-Gjo" firstAttribute="leading" secondItem="OKr-Dg-Z16" secondAttribute="trailing" constant="10" id="NN6-ZC-ZkU"/>
+                <constraint firstItem="J9P-Af-Gjo" firstAttribute="top" secondItem="lD8-K2-Woe" secondAttribute="bottom" constant="10" id="PFP-Lz-fKe"/>
+                <constraint firstItem="2by-ah-fCQ" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="Tgt-Xi-MDc"/>
+                <constraint firstAttribute="trailing" secondItem="lD8-K2-Woe" secondAttribute="trailing" constant="10" id="anY-l9-qFb"/>
+                <constraint firstItem="ZhG-13-RhK" firstAttribute="leading" secondItem="PGq-CY-hRt" secondAttribute="trailing" constant="10" id="bCQ-bt-Mkm"/>
+                <constraint firstItem="oRC-Qs-5lY" firstAttribute="top" secondItem="2by-ah-fCQ" secondAttribute="bottom" constant="15" id="bfd-n0-1Cd"/>
+                <constraint firstItem="OKr-Dg-Z16" firstAttribute="top" secondItem="WXi-8n-Jvn" secondAttribute="bottom" constant="10" id="cra-eS-E3N"/>
+                <constraint firstItem="DvS-xh-UCN" firstAttribute="top" secondItem="HaX-MQ-GRP" secondAttribute="top" constant="130" id="dqO-yN-C1V"/>
+                <constraint firstItem="lD8-K2-Woe" firstAttribute="leading" secondItem="WXi-8n-Jvn" secondAttribute="trailing" constant="10" id="fXu-Pz-Daj"/>
+                <constraint firstItem="aIv-3o-1n4" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="gLx-58-Rs4"/>
+                <constraint firstItem="L5L-CB-laS" firstAttribute="leading" secondItem="2by-ah-fCQ" secondAttribute="trailing" constant="10" id="gZ6-Ok-yuv"/>
+                <constraint firstAttribute="trailing" secondItem="oRC-Qs-5lY" secondAttribute="trailing" id="kiq-fj-gkm"/>
+                <constraint firstItem="OKr-Dg-Z16" firstAttribute="leading" secondItem="HaX-MQ-GRP" secondAttribute="leading" id="neq-jg-jGl"/>
+                <constraint firstAttribute="trailing" secondItem="aIv-3o-1n4" secondAttribute="trailing" id="qqh-j9-qnQ"/>
+                <constraint firstItem="WXi-8n-Jvn" firstAttribute="top" secondItem="oRC-Qs-5lY" secondAttribute="bottom" constant="10" id="vqV-W1-Rvr"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="c3Q-4q-BB3"/>
+            <point key="canvasLocation" x="-290" y="25"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="Color">
+            <color red="1" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
