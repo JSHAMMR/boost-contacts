@@ -15,6 +15,14 @@
 		DC0B88192364AD6500D85260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0B88182364AD6500D85260 /* Assets.xcassets */; };
 		DC0B881C2364AD6500D85260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0B881A2364AD6500D85260 /* LaunchScreen.storyboard */; };
 		DC0B88272364AD6500D85260 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88262364AD6500D85260 /* ContactsTests.swift */; };
+		DC0B885D2364C5F300D85260 /* ContactsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88552364C5F300D85260 /* ContactsConfiguration.swift */; };
+		DC0B885E2364C5F300D85260 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88562364C5F300D85260 /* ContactsPresenter.swift */; };
+		DC0B885F2364C5F300D85260 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88572364C5F300D85260 /* ContactsRouter.swift */; };
+		DC0B88602364C5F300D85260 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88582364C5F300D85260 /* ContactsViewController.swift */; };
+		DC0B88612364C5F300D85260 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88592364C5F300D85260 /* ContactsInteractor.swift */; };
+		DC0B88622364C5F300D85260 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B885A2364C5F300D85260 /* ContactsModel.swift */; };
+		DC0B88632364C5F300D85260 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0B885B2364C5F300D85260 /* ContactsViewController.xib */; };
+		DC0B88642364C5F300D85260 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B885C2364C5F300D85260 /* ContactsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,14 @@
 		DC0B88222364AD6500D85260 /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0B88262364AD6500D85260 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		DC0B88282364AD6500D85260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC0B88552364C5F300D85260 /* ContactsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsConfiguration.swift; sourceTree = "<group>"; };
+		DC0B88562364C5F300D85260 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
+		DC0B88572364C5F300D85260 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
+		DC0B88582364C5F300D85260 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		DC0B88592364C5F300D85260 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
+		DC0B885A2364C5F300D85260 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		DC0B885B2364C5F300D85260 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		DC0B885C2364C5F300D85260 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		E2E93763F7F32755360CD1F2 /* Pods-ContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsTests.release.xcconfig"; path = "Target Support Files/Pods-ContactsTests/Pods-ContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8F6857E0FC46B903990D010 /* Pods_Contacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +114,9 @@
 		DC0B88102364AD6400D85260 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				DC0B88352364BFCB00D85260 /* Common */,
+				DC0B88362364BFF500D85260 /* Modules */,
+				DC0B88372364C00500D85260 /* Resources */,
 				DC0B88112364AD6400D85260 /* AppDelegate.swift */,
 				DC0B88132364AD6400D85260 /* ViewController.swift */,
 				DC0B88152364AD6400D85260 /* Main.storyboard */,
@@ -117,6 +136,51 @@
 			path = ContactsTests;
 			sourceTree = "<group>";
 		};
+		DC0B88352364BFCB00D85260 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DC0B88362364BFF500D85260 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B88392364C0FB00D85260 /* Details */,
+				DC0B88382364C0F000D85260 /* Contacts */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC0B88372364C00500D85260 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC0B88382364C0F000D85260 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B88552364C5F300D85260 /* ContactsConfiguration.swift */,
+				DC0B88562364C5F300D85260 /* ContactsPresenter.swift */,
+				DC0B88572364C5F300D85260 /* ContactsRouter.swift */,
+				DC0B88582364C5F300D85260 /* ContactsViewController.swift */,
+				DC0B88592364C5F300D85260 /* ContactsInteractor.swift */,
+				DC0B885A2364C5F300D85260 /* ContactsModel.swift */,
+				DC0B885B2364C5F300D85260 /* ContactsViewController.xib */,
+				DC0B885C2364C5F300D85260 /* ContactsManager.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		DC0B88392364C0FB00D85260 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		E06CFE98B0D312A31D582903 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +189,6 @@
 				8EFA8503DCA4BA743CA0F17B /* Pods-ContactsTests.debug.xcconfig */,
 				E2E93763F7F32755360CD1F2 /* Pods-ContactsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,7 +203,7 @@
 				DC0B880A2364AD6400D85260 /* Sources */,
 				DC0B880B2364AD6400D85260 /* Frameworks */,
 				DC0B880C2364AD6400D85260 /* Resources */,
-				C15BC6AD6E6E0EECCBC5A273 /* [CP] Embed Pods Frameworks */,
+				1273BD81874C4644ED907D36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B881C2364AD6500D85260 /* LaunchScreen.storyboard in Resources */,
+				DC0B88632364C5F300D85260 /* ContactsViewController.xib in Resources */,
 				DC0B88192364AD6500D85260 /* Assets.xcassets in Resources */,
 				DC0B88172364AD6400D85260 /* Main.storyboard in Resources */,
 			);
@@ -229,7 +293,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C15BC6AD6E6E0EECCBC5A273 /* [CP] Embed Pods Frameworks */ = {
+		1273BD81874C4644ED907D36 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,7 +373,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B88142364AD6400D85260 /* ViewController.swift in Sources */,
+				DC0B88642364C5F300D85260 /* ContactsManager.swift in Sources */,
+				DC0B885E2364C5F300D85260 /* ContactsPresenter.swift in Sources */,
+				DC0B885D2364C5F300D85260 /* ContactsConfiguration.swift in Sources */,
 				DC0B88122364AD6400D85260 /* AppDelegate.swift in Sources */,
+				DC0B885F2364C5F300D85260 /* ContactsRouter.swift in Sources */,
+				DC0B88612364C5F300D85260 /* ContactsInteractor.swift in Sources */,
+				DC0B88622364C5F300D85260 /* ContactsModel.swift in Sources */,
+				DC0B88602364C5F300D85260 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
