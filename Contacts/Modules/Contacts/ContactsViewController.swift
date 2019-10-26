@@ -30,6 +30,10 @@ enum FileLoadError: Error {
     case failedRightNavBarImage
     
 }
+enum TableViewError: Error {
+    case failedRegisterCell
+    
+}
 protocol IContactsViewController: class {
 	var router: IContactsRouter? { get set }
 }
@@ -53,12 +57,43 @@ class ContactsViewController: UIViewController {
             
             try loadJsonFile(fileName: "data")
             
+            // register cell
+            try! registerNibCell(nibNameString: "ContactCell", reuseIdentifier: "ContactCell")
+            
+            
             
         } catch  {
             
         }
     }
-    
+    func registerNibCell (nibNameString:String, reuseIdentifier: String) throws -> Bool{
+        if let nib = try? UINib.init(nibName: nibNameString, bundle: nil) {
+            self.tableView.register(nib, forCellReuseIdentifier: reuseIdentifier)
+            
+        } else {
+            throw TableViewError.failedRegisterCell
+            
+        }
+        
+        return true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // fetch data
+        let userContacts = realm.objects(UserContact.self).sorted(byKeyPath: "created", ascending: false)
+        userContacts.forEach({print($0.firstName)})
+        
+        
+        
+        // feed tablview
+        
+        dataProvider = DataProvider(toItems: userContacts, router: router!)
+        tableView.dataSource = dataProvider
+        tableView.delegate = dataProvider
+        
+        
+    }
     
     func loadJsonFile (fileName:String = "data", extensionfile : String = "json") throws -> Bool  {
         
