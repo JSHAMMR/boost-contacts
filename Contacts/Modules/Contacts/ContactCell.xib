@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="80" id="aQ4-nj-QQ2" customClass="ContactCell" customModule="Contacts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aQ4-nj-QQ2" id="vgD-eh-irR">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-Zk-zdW">
+                        <rect key="frame" x="109" y="20" width="285" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="IYR-vR-JOe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEY-4y-aQm">
+                        <rect key="frame" x="15" y="5" width="70" height="70"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="iUu-jJ-53p"/>
+                            <constraint firstAttribute="width" constant="70" id="pUv-lg-w7E"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="35"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="Color"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V1I-Zk-zdW" firstAttribute="leading" secondItem="pEY-4y-aQm" secondAttribute="trailing" constant="24" id="Bm6-ax-rf4"/>
+                    <constraint firstAttribute="trailing" secondItem="V1I-Zk-zdW" secondAttribute="trailing" constant="20" id="nXZ-VG-N52"/>
+                    <constraint firstItem="pEY-4y-aQm" firstAttribute="leading" secondItem="vgD-eh-irR" secondAttribute="leading" constant="15" id="qAT-eK-HPI"/>
+                    <constraint firstItem="V1I-Zk-zdW" firstAttribute="centerY" secondItem="vgD-eh-irR" secondAttribute="centerY" id="qmb-RH-vAw"/>
+                    <constraint firstItem="pEY-4y-aQm" firstAttribute="centerY" secondItem="vgD-eh-irR" secondAttribute="centerY" id="spK-UF-7Ed"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbName" destination="V1I-Zk-zdW" id="Uay-uM-E7W"/>
+            </connections>
+            <point key="canvasLocation" x="-4.3478260869565224" y="-15.401785714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color">
+            <color red="1" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
