@@ -3,10 +3,7 @@
 //  Contacts
 //
 //  Created by Gamil Ali Qaid Shamar on 27/10/2019.
-//  Copyright (c) 2019 Jamil. All rights reserved.
-//  Modify By:  * Ari Munandar
-//              * arimunandar.dev@gmail.com
-//              * https://github.com/arimunandar
+
 
 import Foundation
 import UIKit

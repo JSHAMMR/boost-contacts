@@ -32,6 +32,7 @@
 		DC0B88742364C84100D85260 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0B886C2364C84100D85260 /* DetailsViewController.xib */; };
 		DC0B88752364C84100D85260 /* DetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B886D2364C84100D85260 /* DetailsManager.swift */; };
 		DC0B88792364CBAB00D85260 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B88782364CBAB00D85260 /* AppRoute.swift */; };
+		DC0B887D2364CF8100D85260 /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B887C2364CF8100D85260 /* GeneralRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		DC0B886C2364C84100D85260 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		DC0B886D2364C84100D85260 /* DetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsManager.swift; sourceTree = "<group>"; };
 		DC0B88782364CBAB00D85260 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		DC0B887C2364CF8100D85260 /* GeneralRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
 		E2E93763F7F32755360CD1F2 /* Pods-ContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsTests.release.xcconfig"; path = "Target Support Files/Pods-ContactsTests/Pods-ContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8F6857E0FC46B903990D010 /* Pods_Contacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0B88782364CBAB00D85260 /* AppRoute.swift */,
+				DC0B887C2364CF8100D85260 /* GeneralRoute.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				DC0B886F2364C84100D85260 /* DetailsPresenter.swift in Sources */,
 				DC0B88122364AD6400D85260 /* AppDelegate.swift in Sources */,
 				DC0B885F2364C5F300D85260 /* ContactsRouter.swift in Sources */,
+				DC0B887D2364CF8100D85260 /* GeneralRoute.swift in Sources */,
 				DC0B88612364C5F300D85260 /* ContactsInteractor.swift in Sources */,
 				DC0B88622364C5F300D85260 /* ContactsModel.swift in Sources */,
 				DC0B88712364C84100D85260 /* DetailsViewController.swift in Sources */,
