@@ -17,6 +17,9 @@ class DataProvider: NSObject, UITableViewDataSource , UITableViewDelegate {
     fileprivate var contacts:  Results<UserContact>!
     fileprivate var routerProvider:  IContactsRouter?
 
+    
+    
+    
     override init() {
     }
     init(toItems items: Results<UserContact>, router:IContactsRouter) {
